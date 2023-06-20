@@ -1,0 +1,88 @@
+
+body {
+   background-color:#e7f1f6;
+  
+}
+
+h4{
+  color:rgb(255, 255, 0);
+}
+
+p{
+	color:white;
+}
+.img-responsive {
+   width:30%;
+   height: 100%;
+}
+
+@media (min-width: 1100px) {
+    .container-fluid{
+        max-width: 800px;
+        
+    }
+}
+.navbar navbar-expand-lg navbar-dark bg-dark{
+	left:30%
+	
+}
+
+.navbar-nav > li{
+  padding-left:1px;
+  padding-right:10px;
+}
+.contain{
+
+	background-color:#a2c8db;
+	padding:10px;
+	width:30%;
+   height: 30%;
+   border-radius: 10%;
+}
+
+.col-8{
+	padding:2%;
+	width:60%;
+  
+}
+
+.text{
+	width:0%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 40%;
+  padding: 10px;
+  height: 600px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.thead-dark{
+	background-color: black;
+	color: white;
+	
+	
+}
+
+th,td{
+	/*margin-left: 50px;*/
+	
+}
+
+
+
+
+
+

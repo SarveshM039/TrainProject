@@ -1,0 +1,58 @@
+@charset "ISO-8859-1";
+
+body {
+    background-color:#e7f1f6;
+}
+
+.container{
+	color:#a2c8db;
+	background-color:#a2c8db;
+	
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+    
+}
+
+
+.labels {
+    font-size: 15px;
+    padding: 2px;
+    font-weight: bold;
+    color: black;
+}
+
+input[type=text]{
+	
+	
+	background-color:#a2c8db;
+	border-left-color: #a2c8db;
+	border-right-color:#a2c8db;
+	border-top-color:#a2c8db;
+	border-bottom-color: black;
+}
+
+input{
+	margin-top:-33px;
+
+	margin-left: 135px;
+}
+
+@media (min-width: 1100px) {
+    .container-fluid{
+        max-width: 800px;
+        
+    }
+}
+.navbar navbar-expand-lg navbar-dark bg-dark{
+	left:30%
+	
+}
+
+.navbar-nav > li{
+  padding-left:1px;
+  padding-right:10px;
+}
+

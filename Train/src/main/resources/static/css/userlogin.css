@@ -1,0 +1,94 @@
+body {
+  font-family: Arial;
+   background-color:#e7f1f6;
+}
+
+input[type=email],input[type=password], select {
+  align-items:"center";	
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  box-sizing: border-box;
+  
+}
+
+input[type=submit] {
+  width: 20%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: auto;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  
+}
+
+input[type=submit]:hover {
+	border-color:red;
+  background-color: #ff0991;
+}
+
+
+.button {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+	
+	
+.container {
+ 
+  
+  height:60%;
+  width:100%;
+   margin: auto;
+  border-radius: 10px;
+  background-color:green;
+  padding: 20px;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  bottom:30%;
+ 
+}
+
+/* .divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+} */
+
+@media (min-width: 1100px) {
+    .container-fluid{
+        max-width: 800px;
+        
+    }
+}
+.navbar navbar-expand-lg navbar-dark bg-dark{
+	left:30%
+	
+}
+
+.navbar-nav > li{
+  padding-left:10px;
+  padding-right:10px;
+}

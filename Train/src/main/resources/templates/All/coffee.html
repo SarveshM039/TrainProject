@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Coffee</title>
+<!-- custome css -->
+<link rel="stylesheet" href="css/coffee.css">
+  <!-- Font Awesome cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" 
+referrerpolicy="no-referrer" /> 
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+ <link rel="stylesheet" href="css/stylee.css"> 
+ <script src="js/scriptt.js"></script>
+</head>
+<body>
+
+
+
+<!-- Header Section  -->
+ <div class="header" id="home">
+   <nav id="navbar">
+      <a href="#home" class="logo">Train<span>.</span></a>
+      <div class="links" id="nav">
+       <a href="#home">Home</a>
+       <a href="#about">About</a>
+       <a href="#contact">Contact</a>
+       <a href="/register">Registration</a>
+       <a href="/login">Login</a>
+       <a href="#blog">Blog</a>
+       <a href="#service">Services</a>
+       <!-- <a href="#team">Team</a> -->
+      </div>
+      
+      <!--  sidebar  -->
+      <div class="sidebar">
+    <div class="logo_details">
+        <i class="bx bxl-audible icon"></i>
+        <div class="logo_name">code Effect</div>
+        <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+        <!-- <li>
+         <i class="bx bx-search"></i>
+         <input type="text" placeholder="search...">   
+          <span class="tooltip">search</span>
+        </li> -->
+        <li>
+          <a href="/">
+              <i class="bx bx-home"></i>
+              <span class="link_name">Home</span>
+          </a>
+        <span class="tooltip">Home</span>
+      </li>
+      <li>
+          <a href="/about1">
+              <i class="bx bx-user-pin"></i>
+              <span class="link_name">About</span>
+          </a>
+        <span class="tooltip">About</span>
+      </li>
+      <li>
+          <a href="/contact1"> 
+              <i class="bx bx-phone"></i>
+              <span class="link_name">Contact</span>
+          </a>
+          <span class="tooltip">Contact</span>
+      </li>
+      <li>
+          <a href="/register">
+              <i class="bx bx-user"></i>
+              <span class="link_name">User Register</span>
+          </a>
+         <span class="tooltip">User Register</span>
+      </li>
+      <li>
+          <a href="/login">
+              <i class="bx bx-log-in"></i>
+              <span class="link_name">Login</span>
+          </a>
+        <span class="tooltip">Login</span>
+      </li>
+    </ul>
+  </div> 
+
+  
+      <!--  sidebar  -->
+      
+      <div class="fas fa-bars" id="menu-btn" onclick="openmenu()"></div>
+      <div class="fa-solid fa-xmark" id="close" onclick="closemenu()"></div>
+   </nav>
+     <div class="content">
+        <h3>Now You can enjoy the journey</h3>
+        <h1>Book your ticket with <br> IRCTC</h1>
+        <!-- <button class="btn">Buy Now</button> -->
+         <video src="./video/smoke.mp4" muted="" autoplay=""></video> 
+    <h2><span>W</span>elCome<span> T</span>o<span> I</span>RCTC</h2>
+     </div>
+     
+     
+    
+ </div>
+ <!-- Header Section  -->
+ 
+<!-- About Section  -->
+<section class="about" id="about">
+        <div class="container">
+            <div class="image">
+            
+            </div>
+            <div class="about-content">
+                <h1>Travelling Train Reservation</h1>
+                <h3>Go Through About Us section for more details.</h3>
+                <p>You can book a train seat 120 days ahead in General quota while Tatkal tickets can 
+                be booked a day in advance. You need to know that Indian Railways reservation has different
+                 travel classes and quotas with different counter timings. The general quota opens between 
+                 8 am to 8.30 am while the tatkal quota opens from 10 am to 10.30 am. If you have booked the
+                  non AC tatkal quota then its counter will be open between 11 am to 11.30 am..</p>
+                 <br>
+                 <br>
+                <a class="btn" style="color: black;" href="about1">About Us</a>
+            </div>
+        </div>
+    </section>
+<!-- About Section  -->
+
+<!-- Blog Section  -->
+<section class="blog" id="blog">
+        <h1 class="heading">Our <span>Train and Package Details</span></h1>
+        <p class="heading-description">Read our Treanding Tour packages and know more about our latest update..</p>
+        <div class="container">
+            <div class="post">
+                <div class="blog-img">
+                    <img src="./images/new/southp.png" alt="">
+                </div>
+                <div class="blog-content">
+                    <h3>Location |<span>karnataka</span></h3>
+                    <h1>South India Packages</h1>
+                    <p>Shri Agnidurga Gopalakrishna Maha kala Bhairava Temple, Karamogaru, Mangaluru.</p>
+                </div>
+            </div>
+            <div class="post">
+                <div class="blog-img">
+                    <img src="./images/new/northp.png" alt="">
+                </div>
+                <div class="blog-content">
+                    <h3>Location|<span>Sikkim</span></h3>
+                    <h1>North-East India Package</h1>
+                    <p>Sikkim is a state in northeast India, bordered by Bhutan, Tibet and Nepal.</p>
+                </div>
+            </div>
+            <div class="post">
+                <div class="blog-img">
+                    <img src="./images/new/Tirupatip.png" alt="">
+                </div>
+                <div class="blog-content">
+                    <h3>Location|<span>Tirupathi</span></h3>
+                    <h1>South India Package</h1>
+                    <p>Tirupati is a city in the Indian state of Andhra Pradesh. Its Sri Venkateswara Temple sits atop one of the the 7 peaks of Tirumala Hills, attracting scores of Hindu pilgrims.</p>
+                </div>
+            </div>
+        </div>
+</section>             
+<!-- Blog Section  -->
+
+ <!-- Service Section -->
+ 
+    <section class="service" id="service">
+       <h1 class="heading">Our <span>Services</span></h1>
+        <p class="heading-description">We provide our service 24x7 = 365</p>
+        <div class="container">
+            <div class="service-box">
+                <div class="service-img">
+                    <img src="./images/new/flight3.jfif" alt="" >
+                </div>
+                <div class="service-content">
+                    <h3>Flight Booking</h3>
+                    <p>Book Affordable Flight with IRCTC</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-img">
+                      <img src="./images/new/hotel.jfif" alt="">
+                </div>
+                <div class="service-content">
+                    <h3>Hotel Booking</h3>
+                    <p>Book Room through IRCTC for better offers</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-img">
+                <img src="./images/new/bus.jfif" alt="">
+                </div>
+                <div class="service-content">
+                    <h3>Bus Booking</h3>
+                    <p> Now You can book bus with IRCTC website</p>
+                </div>
+            </div>
+                         
+           </div> 
+ 
+ </section>
+  <!-- Service Section -->
+  
+<!--Team Section  -->
+    <section class="team" id="team">
+        <h1 class="heading"> Our <span>Team</span></h1>
+        <p class="heading-description"> Long lasting tradition & true love for coffee</p>
+        <div class="container">
+            <div class="team-box">
+                <div class="team-img">
+                    <img src="./images/img/pic-1.png" alt="">
+                </div>
+                <div class="team-content">
+                    <h3>John Deo</h3>
+                    <p>Cook</p>
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-box">
+                <div class="team-img">
+                    <img src="./images/img/pic-2.png" alt="">
+                </div>
+                <div class="team-content">
+                    <h3>John Deo</h3>
+                    <p>Cook</p>
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-box">
+                <div class="team-img">
+                    <img src="./images/img/pic-3.png" alt="">
+                </div>
+                <div class="team-content">
+                    <h3>John Deo</h3>
+                    <p>Cook</p>
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-box">
+                <div class="team-img">
+                    <img src="./images/img/pic-2.png" alt="">
+                </div>
+                <div class="team-content">
+                    <h3>John Deo</h3>
+                    <p>Cook</p>
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+         </div>
+</section> 
+<!--Team Section  -->
+
+<!-- Content Section -->
+ <section class="contact" id="contact">
+        <h1 class="heading">Contact <span>Us</span></h1>
+        <p class="heading-description">We are always here for you...<a href="contact1">Click Here</a></p>
+        <div class="container">
+            <div class="contact-box">
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <h2>Email address <br> <span>Send email anytime</span></h2>
+                </div>
+                <div>
+                    <p>info@irctc.com</p>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>
+            </div>
+            <div class="contact-box">
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h2>Address <br> <span>Find Us</span></h2>
+                </div>
+                <div>
+                    <p>Rail Yatri Niwas Building,New Delhi - 110002</p>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>
+            </div>
+            <div class="contact-box">
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <h2>Call Us <br> <span>Call us anytime</span></h2>
+                </div>
+                <div>
+                    <p>+011-23234763, 23221146</p>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Content Section -->
+
+  <!-- Footer Section -->
+    <section class="footer">
+
+
+        <div class="container">
+            <div class="footer-box">
+                <h3>about us </h3>
+                <p>This is Train Ticket Booking Project</p>
+                <p>Copyrights &copy; 2023 All rights reserved By <a href="https://www.thesimplifieddev.com/">Sarvesh.M</a></p>
+
+            </div>
+            <div class="footer-box">
+                <h3>Newsletter</h3>
+                <p>Stay updaet with our latests</p>
+                <form>
+                    <input type="email" name="email" placeholder="admin@gmail.com">
+                    <button type="submit"><i class="fa-solid fa-right-long"></i></button>
+                </form>
+            </div>
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+                <p>Connect With Us On:</p>
+                <div>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
+
+ <script src="./js/scrip.js"></script>
+</body>
+</html>

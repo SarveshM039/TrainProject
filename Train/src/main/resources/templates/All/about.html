@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+
+<title>Home Page</title>
+ <link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+	integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+
+ <link rel="stylesheet" href="css/style.css">   
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid" >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/home}">Home Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/about}">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/contact}">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/register}">User Registration</a>
+                </li>
+              <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/login}">Login</a>
+                </li>
+            </ul>
+        <div class="toggle" style="margin-left: 15%; float: right;">
+          <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+             <i class="fa fa-bars" ></i>
+           </a>    
+       </div>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" >
+        <div class="offcanvas-header" >
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Traveling Train</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          
+          <div class="left-navigation">
+             <div class="navigation-container">
+              <ul>
+                 <li class="main-li"><a href="">Home Page</a></li>
+                 <li class="main-li"><a href="/contact">Contact Us</a></li>
+                 <li class="main-li"><a href="/about">About Us</a></li>
+                 <li class="main-li"><a href="/register">User Registration</a></li>
+                 <li class="main-li"><a href="/login">Login</a></li>
+              </ul>
+            </div> 
+          </div>
+        </div>
+      </div>
+</nav>
+
+
+ <div align="center" style="color: green ; margin-top: 40px;">
+  <h1>About Us</h1>
+</div>
+
+<div class="row justify-content-center" style="margin-top: -90px;">
+     <a th:class="navbar-brand" href="#">
+  <img src="../images/new/train1.png" class="img-responsive" />            
+</a>
+</div>   
+
+<div style="margin-top: -170px;">
+<h1 style="background-color: gray; ">Travelling Train Reservation</h1>
+<p>You can book a train seat 120 days ahead in General quota while Tatkal tickets can be booked a day in advance.
+   You need to know that Indian Railways reservation has different travel classes and quotas with different counter timings. 
+   The general quota opens between 8 am to 8.30 am while the tatkal quota opens from 10 am to 10.30 am. 
+   If you have booked the non AC tatkal quota then its counter will be open between 11 am to 11.30 am.</p>
+
+<br>
+
+<p>In order to check the Indian Railway seat availability visit indianrail.gov.in and click on seat availability which will ask you 
+   to provide in details like train number, journey date, source station, destination station, class and quota. Alternatively, you can 
+   also go to the NTES website and click on seat/berth availability to the extreme left of the page. On selecting the option you will 
+   be redirected to the website of indianrail.gov.in. In case you’re still to book train ticket then you can click on the seat/berth 
+   booking which is an option just below the seat/berth availability. The booking option will take you to the IRCTC website where 
+   you can make your train ticket booking.</p>
+ <br>
+ 
+<p>There are different quotas and classes of travel in the Indian Railways. The different quotas are General, Tatkal, Premium Tatkal, 
+   Ladies, Defence, Parliament House, Foreign Tourist, Yuva and Duty Pass. Following are the classes of travel that you can choose from 
+   when booking your train ticket:</p> 
+  <br>
+  
+  <h2>First class AC:</h2> 
+  <p>This class provides the most comfortable train travel with privacy and no disturbance. It comes with spacious coaches and latest 
+  facilities and bigger cabins.</p>
+ <br>
+ 
+ <h2>Second class AC:</h2>
+ <p>It is a bit less than the first class when it comes to facilities but will guarantee you a similar travel experience. Go for it if your 
+     looking for a comfortable travel with less expense.</p>
+     
+ <h2>Third class AC:</h2>    
+ <p>If you are not too fussy about the facilities and features while travelling and all you need is an air conditioned coach then this is 
+ the best class for you. Sleeper class: This an affordable class of travel for people who want a budget-friendly journey. It comes without 
+ AC and is generally crowded so brace up yourself before your journey.</p>
+ <br>
+ 
+<h2>AC chair car:</h2>
+<p>If you are someone who needs to travel for a few hours then this is the class you can opt for. You can also call in meals from the onboard
+ catering service.</p>
+ 
+ <h1 style="background-color: gray; ">Improved and Faster Trains</h1>
+ <h2>Tejas Express:</h2>
+ <p>The Indian Railways is set to reform and improve the passenger experience by making the train trips nothing less than air travel. Now you 
+ will be offered the flight-like experience while travelling in a train with Tejas Express going for a makeover. The IR is expected to come up 
+ with 23 new coaches with facilities including motor-operated windows, luxurious leather seats, infotainment LCD screens, USB charging points, 
+ GPS-based passenger information system, and modular touch-free toilets with bio-vacuum system.</p>
+ 
+ <h2>Train 18:</h2>
+ <p>The IR is soon to launch Train 18 which is touted to be the fastest train in India. The train is said to run on a speed of 180 kmph and does 
+ not require a locomotive as it runs on an electric traction just like metro trains. Both the trains are going to revolutionise the face of the 
+ Indian Railways.</p>
+</div>
+
+<footer class="footer">
+ <div class="container">
+   <div class="row">
+    <div  class="footer-col">
+     <h4>IRCTC Trains</h4>
+     <ul>
+        <li><a href="#">General Information</a></li>
+        <li><a href="#">Important Information</a></li>
+        <li><a href="#">Agents</a></li>
+        <li><a href="#">Enquiries</a></li>
+     </ul>
+    </div>
+    
+    <div  class="footer-col">
+     <h4>How To</h4>
+     <ul>
+        <li><a href="#">IRCTC Official App</a></li>
+        <li><a href="#">Advertise With us</a></li>
+        <li><a href="#">Refund Rules</a></li>
+        <li><a href="#">Person with Disability Facilities</a></li>
+     </ul>
+    </div>
+    
+    <div  class="footer-col">
+     <h4>IRCTC eWallet</h4>
+     <ul>
+        <li><a href="#">IRCTC Loyalty Program </a></li>
+        <li><a href="#">IRCTC-IPAY Payment Gateway</a></li>
+        <li><a href="#">IRCTC Zone</a></li>
+     </ul>
+    </div>
+    
+    <div  class="footer-col">
+     <h4>follow us</h4>
+     <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    </div>
+    <hr size="3" style="color: white;">
+ <div class="copyright">
+   <p> @ Copyright 2023, Sarvesh | All Rights Reserved</p>
+ </div>
+   </div>
+ </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+
+<title>Home Page</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+	integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+
+<link rel="stylesheet" href="css/style.css">
+
+	<style >
+	
+	@media (min-width: 1100px) {
+    .container-fluid{
+        max-width: 800px;
+        
+    }
+}
+.navbar navbar-expand-lg navbar-dark bg-dark{
+	left:30%
+	
+}
+
+.navbar-nav > li{
+  padding-left:10px;
+  padding-right:10px;
+}
+	
+	</style>
+</head>
+<body>
+
+	<div class="text-center">
+		<!-- <div class="container">
+			<div class="row"
+				style="background-color: gray; color: white; width: 131%; margin-left: -20%;">
+				<h1>Travelling Train</h1>
+			</div>
+		</div> -->
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" th:href="@{/home}">Home Page</a></li>
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" th:href="@{/about}">About Us</a></li>
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" th:href="@{/contact}">Contact Us</a></li>
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" th:href="@{/register}">User Registration</a>
+						</li>
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" th:href="@{/login}">Login</a></li>
+					</ul>
+   <div class="toggle" style="margin-left: 15%; float: right;">
+          <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+             <i class="fa fa-bars" ></i>
+           </a>    
+       </div>
+				</div>
+			</div>
+			<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" >
+        <div class="offcanvas-header" >
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Traveling Train</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          
+          <div class="left-navigation">
+             <div class="navigation-container">
+              <ul>
+                 <li class="main-li"><a href="">Home Page</a></li>
+                 <li class="main-li"><a href="/contact">Contact Us</a></li>
+                 <li class="main-li"><a href="/about">About Us</a></li>
+                 <li class="main-li"><a href="/register">User Registration</a></li>
+                 <li class="main-li"><a href="/login">Login</a></li>
+              </ul>
+            </div> 
+          </div>
+        </div>
+      </div>
+		</nav>
+
+		<div align="center" style="color: green ; margin-top: 40px;">
+  <h1>Home Page</h1>
+</div>
+
+<div class="row justify-content-center" style="margin-top: -90px; margin-right: 140px;">
+     <a th:class="navbar-brand" href="#">
+  <img src="../images/train2.png" class="img-responsive" />            
+</a>
+</div> 
+
+		
+	</div>
+	<div>
+		<div class="d-flex justify-content-center " style="margin-top: -120px;">
+			<div class="column" style="background-color: #a2c8db; border-radius: 10px; ">
+				<h2 style="background-color: gray; border-radius: 5px;">Latest Events</h2>
+				<p>
+					<b>Today</b>,The coverage for the IRCTC travel insurance scheme is
+					applicable for each passenger under the PNR in case of death,
+					permanent total disability..
+				</p>
+				<p>
+					Once the premium is paid by the passengers no cancellations is
+					allowed.<br>Accordingly, no refund of
+				</p>
+			</div>
+			<div class="column" style="background-color: #a2c8db;border-radius: 10px;">
+				<h2 style="background-color: gray; border-radius: 5px;">Welcome To Traveling Train !</h2>
+				<p>
+					<b>Traveling Train</b> Indian Railway Finance Corporation(IRFC) has
+					raised $500 million in overseas bonds as part of its fund raising
+					activity, a move that signals a stable currency regime and will
+					help the railway arm to meet extra budgetary resources(EBR) target,
+					a critical part of the Indian Railways capex. According to a
+					source, the five-year bonds received bids for thrice the amount on
+					offer at a rate of 2.23%.Dollar bonds are pegged to the US treasury
+					yields which has come from 3.23% in early November 2018 to around
+					2.44% by the end of March 2019.
+				</p>
+				<br>
+				<p>Mehta, however,cautioned that usually an un-hedged exposure
+					is taken by firms whose balance sheets have a natural hedge, that
+					is inflows are also in the same currency in which it avails loans</p>
+				<br>
+
+				<p>
+					This web site is developed by <a href="#">IngroInfo Software
+						Solution</a>
+				</p>
+
+				<br>
+				<p>The belief that customer satisfaction is as important as
+					their products and services, have helped this establishment garner
+					a vast base of customers, which continues to grow by the day.</p>
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col">
+					<h4>IRCTC Trains</h4>
+					<ul>
+						<li><a href="#">General Information</a></li>
+						<li><a href="#">Important Information</a></li>
+						<li><a href="#">Agents</a></li>
+						<li><a href="#">Enquiries</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<h4>How To</h4>
+					<ul>
+						<li><a href="#">IRCTC Official App</a></li>
+						<li><a href="#">Advertise With us</a></li>
+						<li><a href="#">Refund Rules</a></li>
+						<li><a href="#">Person with Disability Facilities</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<h4>IRCTC eWallet</h4>
+					<ul>
+						<li><a href="#">IRCTC Loyalty Program </a></li>
+						<li><a href="#">IRCTC-IPAY Payment Gateway</a></li>
+						<li><a href="#">IRCTC Zone</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<h4>follow us</h4>
+					<div class="social-links">
+						<a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i
+							class="fab fa-twitter"></i></a> <a href="#"><i
+							class="fab fa-instagram"></i></a> <a href="#"><i
+							class="fab fa-linkedin-in"></i></a>
+					</div>
+				</div>
+				<hr size="3" style="color: white;">
+				<div class="copyright">
+					<p>@ Copyright 2023, Sarvesh | All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>

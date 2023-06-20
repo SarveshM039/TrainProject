@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>Registration</title>
+
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+	<link rel="stylesheet" th:href="@{./css/style.css}">
+	
+	 <!--sidebar link  -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" 
+referrerpolicy="no-referrer" /> 
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+ <link rel="stylesheet" href="css/stylee.css"> 
+ <script src="js/scriptt.js"></script>
+          
+           <!--sidebar link  -->
+           
+  <style >
+     body{
+     width: 100%;
+    height: 100vh;
+    background-image:url(../images/new/image18.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+     }
+     
+     .contain{	
+	background-color:#a2c8db;
+	padding:10px;
+	width:30%;
+   height: 30%;
+   margin-left: 50%;
+  background: rgba(255,255,255,.2);
+	box-shadow: 0 5px 15px rgba(0,0,0,.5)
+  
+  
+ 
+   
+}
+   
+    .header .content {
+    padding: 150px 7%;
+    color: white;
+    margin-left: -490px;
+    
+}
+
+.header .content h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 0;
+}
+
+.header .content h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: red;
+}  
+   
+     </style>   
+</head>
+<body>
+
+	<div class="text-center">
+				<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-top: -20px;">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item" style="margin-left: 200px;">
+                    <a class="nav-link active" aria-current="page" th:href="@{/}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/about1}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/contact1}">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/register}">Registration</a>
+                </li>          
+             <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/login}">Login</a>
+                </li>
+            </ul>
+        </div>
+      </div>
+      <!--  sidebar  -->
+      <div class="sidebar">
+    <div class="logo_details">
+        <i class="bx bxl-audible icon"></i>
+        <div class="logo_name">Train</div>
+        <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list" style="margin-left: -32px;">
+       <li>
+          <a href="/">
+              <i class="bx bx-home"></i>
+              <span class="link_name">Home</span>
+          </a>
+        <span class="tooltip">Home</span>
+      </li>
+      <li>
+          <a href="/about1">
+              <i class="bx bx-user-pin"></i>
+              <span class="link_name">About</span>
+          </a>
+        <span class="tooltip">About</span>
+      </li>
+      <li>
+          <a href="/contact1"> 
+              <i class="bx bx-phone"></i>
+              <span class="link_name">Contact</span>
+          </a>
+          <span class="tooltip">Contact</span>
+      </li>
+      <li>
+          <a href="/register">
+              <i class="bx bx-user"></i>
+              <span class="link_name">User Register</span>
+          </a>
+         <span class="tooltip">User Register</span>
+      </li>
+      <li>
+          <a href="/login">
+              <i class="bx bx-log-in"></i>
+              <span class="link_name">Login</span>
+          </a>
+        <span class="tooltip">Login</span>
+      </li>
+    </ul>
+  </div> 
+
+  
+      <!--  sidebar  -->
+      
+      <div class="fas fa-bars" id="menu-btn" onclick="openmenu()"></div>
+      <div class="fa-solid fa-xmark" id="close" onclick="closemenu()"></div>
+		</nav>
+
+<br>
+    <div class= "header">
+     <div class="content">
+        <h3>Now You can Book ticket with IRCTC</h3>
+        <h1>Create Your Account</h1>
+        <!-- <button class="btn">Buy Now</button> -->
+     </div>
+     </div>
+		<div class="row justify-content-center" >
+			<div class=" contain" style="border-radius: 20px; margin-top: -420px;  ">
+
+          
+    
+		     <div th:if="${session.message}">
+		         
+		         <div  class="alert  alert-danger text-center" role="alert">
+		            <span th:text="${session.message}"></span>
+		         
+		         </div>
+		       <th:block th:text="${#session.removeAttribute('message')}" ></th:block>
+		       
+		       </div>
+
+   
+
+<div>
+				<h4 style="color: black">Register Here</h4>
+<div>
+  <form th:action="@{/process_register}" method="post" style="max-width: 600px; margin: 0 auto;" th:object="${user}">
+    <div class="m-3" style="color: black">
+
+      <div class="form-group row">
+        <label class="col-form-lable col-4">First Name</label>
+        <div class="col-8">
+          <input type="text" class="form-control" id="firstName" th:field="*{firstName}" minlength="2" placeholder="Enter First Name" maxlength="20" required />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-form-lable col-4">Last Name</label>
+        <div class="col-8">
+          <input type="text" class="form-control" id="lastName" th:field="*{lastName}" minlength="1" placeholder="Enter Last Name" maxlength="20" required />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-form-lable col-4">EmailID</label>
+        <div class="col-8">
+          <span class="Invalid-Email" id="emailError" style="color: red;"></span>
+          <input type="email" id="email" class="form-control" placeholder="Enter Your EmailId" th:field="*{email}" required />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-form-lable col-4">Aadhar_NO</label>
+        <div class="col-8">
+          <input type="text" class="form-control" id="aadhar" th:field="*{aadhar}" placeholder="Enter Aadhar Number" maxlength="12" required />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-form-lable col-4">Password</label>
+        <div class="col-8">
+          <input type="password" class="form-control" id="password" th:field="*{password}" placeholder="*****" minlength="6" maxlength="10" required />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-form-lable col-4">Address</label>
+        <div class="col-8">
+          <input type="text" class="form-control" id="address" th:field="*{address}" maxlength="20" placeholder="Enter Address" required />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-form-lable col-4">Phone</label>
+        <div class="col-8">
+          <input type="text" class="form-control" id="phone" th:field="*{phone}" minlength="3"  placeholder="Enter Phone Num" required="required" />
+        </div>
+      </div>
+      <br>
+
+      <div>
+        <button type="submit" onclick="validateForm(event)" class="btn btn-light" style=" background: linear-gradient(-135deg, #71b7e6, #9b59b6);">Register Now</button>
+      </div>
+    </div>
+  </form>
+</div>
+<br>
+</div>
+<!-- <script>
+  function validateForm(event) {
+    event.preventDefault();
+
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('emailError');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(emailInput.value)) {
+      emailError.textContent = 'Invalid email format...!';
+      return;
+    } else if (emailInput.value.includes('#') || emailInput.value.includes('$') || emailInput.value.includes('%') || emailInput.value.includes('&')) {
+      emailError.textContent = 'Email should not contain #, $, %, !, or & characters.';
+      return;
+    } else {
+      emailError.textContent = '';
+      emailInput.setCustomValidity('');
+    }
+
+    // Retrieve form input values
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const aadhar = document.getElementById('aadhar').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+
+    // Validate input fields
+    if (firstName === '') {
+      alert('Please enter your First Name.');
+      return;
+    }
+
+    if (lastName === '') {
+      alert('Please enter your Last Name.');
+      return;
+    }
+
+    if (aadhar === '') {
+      alert('Please enter your Aadhar Number.');
+      return;
+    }
+
+    if (password === '') {
+      alert('Please enter a password.');
+      return;
+    }
+
+    if (address === '') {
+      alert('Please enter your Address.');
+      return;
+    }
+
+    if (phone === '') {
+      alert('Please enter your Phone Number.');
+      return;
+    }
+
+   
+    
+    // Submit the form
+    document.forms[0].submit();
+  }
+</script>
+ -->
+ <script>
+  function validateForm(event) {
+    event.preventDefault();
+
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('emailError');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(emailInput.value)) {
+      emailError.textContent = 'Invalid email format...!';
+      return;
+    } else if (emailInput.value.includes('#') || emailInput.value.includes('$') || emailInput.value.includes('%') || emailInput.value.includes('&')) {
+      emailError.textContent = 'Email should not contain #, $, %, or & characters.';
+      return;
+    } else {
+      emailError.textContent = '';
+    }
+
+    // Retrieve form input values
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const aadhar = document.getElementById('aadhar').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+
+    // Validate input fields
+    if (firstName === '') {
+      alert('Please enter your First Name.');
+      return;
+    }
+
+    if (lastName === '') {
+      alert('Please enter your Last Name.');
+      return;
+    }
+
+    if (aadhar === '') {
+      alert('Please enter your Aadhar Number.');
+      return;
+    }
+
+    if (password === '') {
+      alert('Please enter a password.');
+      return;
+    }
+   
+    const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).{8,}$/;
+    if (!passwordRegex.test(password)) {
+      alert('Password should contain at least one special character, one letter, and one number, and be at least 8 characters long.');
+      return;
+    }
+    
+    if (address === '') {
+      alert('Please enter your Address.');
+      return;
+    }
+
+    if (phone.length !== 10) {
+    	  alert('Phone Number should be exactly 10 digits.');
+    	  return;
+    	}
+    const phoneNumberRegex = /^[6-9]\d{9}$/;
+    if (!phoneNumberRegex.test(phone)) {
+      alert('Phone Number should start with 6, 7, 8, or 9 and have a total of 10 digits.');
+      return;
+    }
+
+    // Submit the form
+    document.forms[0].submit();
+  }
+</script>
+ </div>
+ </div>
+ </div>
+ 
+</body>
+</html>

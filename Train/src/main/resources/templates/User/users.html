@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>All users -CodeJava</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+
+
+</head>
+<body >
+<div class="container  text-center">
+    <div >
+         <h1>List of All users</h1>
+    </div>
+ <div>
+      <table class="table table-striped table-bordered">
+          <thead class="thead-dark">
+               <tr>
+                 <th>User ID</th>
+                 <th>First Name</th>
+                 <th>Last Name</th>
+                 <th>EmailID</th>
+                 <th>Aadhar Number</th>
+                 <th>Phone</th>
+                 <th>Address</th>
+               </tr>
+           </thead>
+           <tbody>
+           <tr th:each="user: ${listUsers}">
+              <td th:text="${user.id}">User ID</td>
+              <td th:text="${user.firstName}">First Name</td>
+              <td th:text="${user.lastName}">Last Name</td>
+              <td th:text="${user.email}">EmailID</td>
+              <td th:text="${user.aadhar}">Aadhar Number</td>
+              <td th:text="${user.phone}">Phone</td>
+              <td th:text="${user.address}">Address</td>
+         </tr>
+           </tbody>
+     </table>
+ 
+ </div>  
+ 
+ </div>
+
+</body>
+</html>

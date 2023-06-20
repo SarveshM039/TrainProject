@@ -1,0 +1,25 @@
+
+@media (min-width: 1100px) {
+    .container-fluid{
+        max-width: 800px;
+        
+    }
+}
+.navbar navbar-expand-lg navbar-dark bg-dark{
+	left:30%
+	
+}
+
+.navbar-nav > li{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.text-center{
+	
+	margin-top:-600px;
+	max-width:1375.5px;
+	width: 105%;
+    margin-left: -20px;
+}
+

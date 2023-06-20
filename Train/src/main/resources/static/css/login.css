@@ -1,0 +1,75 @@
+@charset "ISO-8859-1";
+
+body {
+  background-color: #19a319;
+}
+
+h4{
+  color:rgb(255, 255, 0);
+}
+
+p{
+	color:white;
+}
+.img-responsive {
+   width:30%;
+   height: 100%;
+}
+
+.img-responsivee{
+	width:80%;
+	height:40%;
+}
+
+@media (min-width: 1100px) {
+    .container-fluid{
+        max-width: 800px;
+        
+    }
+}
+.navbar navbar-expand-lg navbar-dark bg-dark{
+	left:30%
+	
+}
+
+.navbar-nav > li{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.contain{
+	color:dark green;
+	background-color:green;
+	padding:10px;
+	width:30%;
+   height: 30%;
+}
+
+.col-8{
+	padding:2%;
+	width:60%;
+  
+}
+
+.text{
+	width:0%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 500px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

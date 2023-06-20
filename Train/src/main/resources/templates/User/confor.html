@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <title> Booking Ticket</title>
+    <link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/new.css}">
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+    <!--sidebar link  -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" 
+referrerpolicy="no-referrer" /> 
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+ <link rel="stylesheet" th:href="@{/css/stylee.css}"> 
+ <script th:src="@{/js/scriptt.js}"></script>
+          
+           <!--sidebar link  -->
+    
+    
+     
+   </head>
+<body>
+
+  <div class="text-center">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-top: -20px;">
+			<div class="container-fluid">
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="navbar-collapse" id="navbarSupportedContent">
+
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" th:href="@{/user/searchtrain}">Home Page</a></li>
+							
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" th:href="@{/user/userbook}">Booking List</a></li>	
+							
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" th:href="@{/user/profile}">User Profile</a></li>	
+							
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" th:href="@{/user/change}">Change Password</a></li>		
+
+                        <li class="nav-item"><a class="nav-link active"
+							aria-current="page" th:href="@{/user/cancelticket}">Cancelled Ticket</a></li>	
+
+
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" th:href="@{/#}">Logout</a></li>
+					</ul>
+
+				</div>
+			</div>
+			 <!--  sidebar  -->
+      <div class="sidebar">
+    <div class="logo_details">
+        <i class="bx bxl-audible icon"></i>
+        <div class="logo_name">Train</div>
+        <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list" style="margin-left: -32px;">
+        <!-- <li>
+         <i class="bx bx-search"></i>
+         <input type="text" placeholder="search...">   
+          <span class="tooltip">search</span>
+        </li> -->
+        <li>
+          <a th:href="@{/user/searchtrain}">
+              <i class="bx bx-home"></i>
+              <span class="link_name">Home</span>
+          </a>
+        <span class="tooltip">Home</span>
+      </li>
+      <li>
+          <a th:href="@{/user/userbook}">
+              <i class="bx bx-book-add"></i>
+              <span class="link_name">Booking List</span>
+          </a>
+        <span class="tooltip">Booking List</span>
+      </li>
+      <li>
+          <a th:href="@{/user/profile}"> 
+              <i class="bx bx-user"></i>
+              <span class="link_name">User Profile</span>
+          </a>
+          <span class="tooltip">User Profile</span>
+      </li>
+      <li>
+          <a th:href="@{/user/change}">
+              <i class="bx bx-low-vision"></i>
+              <span class="link_name">Change Password</span>
+          </a>
+         <span class="tooltip">User Register</span>
+      </li>
+      <li>
+          <a  th:href="@{/user/cancelticket}">
+              <i class="bx bx-no-entry"></i>
+              <span class="link_name">Cancelled Ticket</span>
+          </a>
+        <span class="tooltip">Cancelled Ticket</span>
+      </li>
+      
+       <li>
+          <a  th:href="@{/#}">
+              <i class="bx bx-log-out"></i>
+              <span class="link_name">Logout</span>
+          </a>
+        <span class="tooltip">Logout</span>
+      </li>
+    </ul>
+  </div> 
+		</nav>
+
+		</div>
+  <div class="container">
+    <div class="title">Booking</div>
+    <div class="content">
+     
+         
+          <input type="hidden" name="trainId" th:field="${bookTicket.trainId}"> 
+        
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input type="text" name="firstName" placeholder="Enter First Name" th:value="${bookTicket.firstName}" maxlength="20" minlength="3" readonly="readonly"/>
+          </div>
+          
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            <input type="text"  name="lastName" placeholder="Enter Last Name" th:value="${bookTicket.lastName}" maxlength="20" readonly="readonly"/>
+          </div>
+          
+          <div class="input-box">
+            <span class="details">EmailID</span>
+            <input type="text" name="email" placeholder="Enter your Email" th:value="${bookTicket.email}" required readonly="readonly"/>
+          </div>
+          
+             <div class="input-box">
+            <span class="details">Aadhar Number</span>
+            <input type="text" name="aadhar" placeholder="Enter your aadhar number" th:value="${bookTicket.aadhar}" maxlength="12" required="required" readonly="readonly"/>
+          </div>
+          
+             <div class="input-box">
+            <span class="Gender">Gender</span>
+            <input type="text" name="gender" placeholder="Enter your aadhar number" th:value="${bookTicket.gender}" maxlength="12" required="required" readonly="readonly"/>
+              <!-- <select name="gender" >
+              <option value="">--Select--</option>
+			  <option value="male">Male</option>
+			  <option value="female">Female</option>
+			  <option value="transgender">Transgender</option>
+			</select> -->
+          </div>
+          
+          
+             <div class="input-box">
+            <span class="details">Phone</span>
+            <input type="text" name="phone" placeholder="Enter Phone Number" mimlength="3" maxlength="10" required readonly="readonly"/>
+          </div>
+          
+          <div class="input-box">
+            <span class="details">Train Name</span>
+            <input type="text" name="trainName" placeholder="Enter Train Name"  th:value="${bookTicket.trainName}" readonly="readonly" />
+          </div>
+        
+          <div class="input-box">
+            <span class="details">Train From</span>
+           <input type="text" name="trainFrom" placeholder="Enter From Place" th:value="${bookTicket.trainFrom}"  readonly="readonly" required/>
+          </div>
+          
+          <div class="input-box">
+            <span class="details">Train To</span>
+            <input type="text"  name="trainTo" placeholder="Enter To Place " th:value="${bookTicket.trainTo}"  readonly="readonly" required />
+          </div>
+         
+          <div class="input-box">
+            <span class="details">Train From Timing</span>
+            <input type="text" name="fromTiming" placeholder="Enter From Timing" th:value="${bookTicket.fromTiming}" readonly="readonly" />
+          </div>
+          
+          <div class="input-box">
+            <span class="details">Train To Timing</span>
+            <input type="text" name="toTiming" placeholder="Enter To Timing" th:value="${bookTicket.toTiming}" readonly="readonly" required />
+          </div>
+         
+          <div class="input-box">
+            <span class="details">Schedule</span>
+            <input type="text" name="Schedule" placeholder="Enter Schedule" th:value="${bookTicket.Schedule}"  readonly="readonly" required  />
+          </div>
+          
+          <div class="input-box">
+            <span class="details">Train Price</span>
+            <input type="text" name="price" th:value="${bookTicket.price}" readonly="readonly" required />
+          </div>
+          
+          
+          <div class="input-boxs">
+            <span class="detail">No of Stops</span>
+            <input type="text" name="noofstop"  th:value="${bookTicket.noofstop}" readonly="readonly" />
+          </div>
+         
+        </div>
+        
+    </div>
+  </div>
+
+</body>
+</html>

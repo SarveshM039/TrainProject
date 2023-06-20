@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.3.final using JasperReports Library version 6.20.3-415f9428cffdb6805c6f85bbb29ebaf18813a2ab  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TrainTicket" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7a5c9b49-9dc5-422a-ac69-e92cf61ef530">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="IkFERFJFU1MiICwxNSwxNSw4NTg0Mjc4Ny01M2I3LTQ0N2MtYjBkYS00NzQ5MDUxZGM3NmY7"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<field name="trainId" class="java.lang.Long"/>
+	<field name="firstName" class="java.lang.String"/>
+	<field name="lastName" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="price" class="java.lang.String"/>
+	<field name="trainName" class="java.lang.String"/>
+	<field name="phone" class="java.lang.String"/>
+	<field name="aadhar" class="java.lang.String"/>
+	<field name="gender" class="java.lang.String"/>
+	<field name="toTiming" class="java.lang.String"/>
+	<field name="noofstop" class="java.lang.String"/>
+	<field name="trainFrom" class="java.lang.String"/>
+	<field name="trainTo" class="java.lang.String"/>
+	<field name="fromTiming" class="java.lang.String"/>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="555" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="121" width="802" height="190" uuid="34a2ae4b-4055-476b-8676-d499f6af510b"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" positionType="Float" x="159" y="25" width="159" height="18" uuid="9ab904ac-7c2d-4266-8118-5ad542de4a56">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3ff5fb96-2b3b-45d3-9872-4ffb429ed973"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{trainId}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" positionType="Float" x="159" y="136" width="159" height="18" uuid="6866b333-aa4f-4c14-9ae6-ebfcd40acc40">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" positionType="Float" x="477" y="136" width="221" height="18" uuid="bf284851-42ca-411e-ae3b-c4ee2113dccd">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0ea881f8-4ec5-47cc-b87b-7a616372e548"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{lastName}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" positionType="Float" x="159" y="154" width="159" height="18" uuid="a6fc316a-b3b9-473a-b6a6-16fc39cb6f13">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="414f0724-bdc5-403f-b6a8-b359e32ccf92"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" positionType="Float" x="159" y="83" width="159" height="18" uuid="67a49ce6-aa7d-408d-8cfa-f4f3f187f4e0">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8800bb85-e22b-4b9c-8476-caa7336fa5c7"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" positionType="Float" x="477" y="25" width="221" height="18" uuid="198aaba5-8551-408c-87b1-ea90282d1942">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{trainName}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" positionType="Float" x="477" y="172" width="221" height="18" uuid="f4df75dc-ecd4-424f-b80f-74795dfce7fd">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" positionType="Float" x="477" y="154" width="221" height="18" uuid="4e2798da-a1a4-4ebd-904e-f69204931a5c">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{phone}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" positionType="Float" x="159" y="172" width="159" height="18" uuid="eb470d77-cfd0-4eee-a638-e578799d3fd4">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{aadhar}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" positionType="Float" x="477" y="43" width="221" height="20" uuid="02dbd062-ec69-43b9-b47a-e8a030cda67d">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fromTiming}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" positionType="Float" x="477" y="63" width="221" height="20" uuid="bab9dc12-a393-4a33-812c-fe7d38d002bb">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{toTiming}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Column header" x="0" y="25" width="159" height="18" forecolor="#000000" uuid="8de2f8c4-d273-4ec8-ad54-02efd36a5675">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3ff5fb96-2b3b-45d3-9872-4ffb429ed973"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					</box>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ Train ID]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="0" y="136" width="159" height="18" forecolor="#000000" uuid="46e9e137-bdd6-49f2-98dd-2383afcf7548">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ FirstName]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="318" y="136" width="159" height="18" forecolor="#000000" uuid="5cad8ef2-d90e-4a38-823b-428c24fbcdb2">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0ea881f8-4ec5-47cc-b87b-7a616372e548"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ LastName]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="0" y="154" width="159" height="18" forecolor="#000000" uuid="0a5f9873-c877-41e7-864c-e438a8758818">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="414f0724-bdc5-403f-b6a8-b359e32ccf92"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ Email]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="0" y="83" width="159" height="18" forecolor="#000000" uuid="f92a3af9-0f99-4bb4-b7bb-7023cf5fbfce">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8800bb85-e22b-4b9c-8476-caa7336fa5c7"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					</box>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ Price]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="318" y="25" width="159" height="18" forecolor="#000000" uuid="d9e6048f-5b02-442f-8950-e62ea641c427">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0ea881f8-4ec5-47cc-b87b-7a616372e548"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					</box>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ TrainName]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="318" y="172" width="159" height="18" forecolor="#000000" uuid="7d453733-67b1-46b6-8c8d-559557cacbf7">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ Gender]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="318" y="154" width="159" height="18" forecolor="#000000" uuid="0fe162c6-d9e3-4ce5-8328-1ee81b2db937">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ Phone]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="0" y="172" width="159" height="18" forecolor="#000000" uuid="c013eefe-183d-488d-b192-c87401b1077b">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ Aadhar]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="318" y="43" width="159" height="20" forecolor="#000000" uuid="73f9182f-f08b-4e97-9b4a-027499c82ed7">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					</box>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ From Timing]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="318" y="63" width="159" height="20" forecolor="#000000" uuid="8e2c6e86-206f-4483-ba87-5acdfa053f8f">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					</box>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ To Timing]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="318" y="83" width="159" height="18" forecolor="#000000" uuid="89d60c32-c322-45af-8ec7-548803eaa160">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					</box>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ Noofstop]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="0" y="63" width="159" height="20" forecolor="#000000" uuid="70289e3a-8a33-46ff-87fa-f03fa63a8bff">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					</box>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ TrainTo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="0" y="43" width="159" height="20" forecolor="#000000" uuid="7d2fb37f-e45a-4105-8ed6-7909f7269630">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					</box>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ TrainFrom]]></text>
+				</staticText>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" positionType="Float" x="159" y="43" width="159" height="20" uuid="cd313b82-4392-4bdb-83ba-d7d956d5ea06">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{trainFrom}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" positionType="Float" x="159" y="63" width="159" height="20" uuid="ade7a340-49f2-42a8-9ddf-136772d4c775">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{trainTo}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="Detail" positionType="Float" x="477" y="83" width="221" height="18" uuid="b5964e9e-30a1-4f0f-8fd7-a47e9c01bec4">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#666666"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{noofstop}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="116" width="802" height="20" uuid="b39f524a-72d8-4773-80ce-3f0be3c06b62"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[ Passenger Details:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="801" height="24" uuid="ac54e4bb-aac5-4f24-b5da-66c28e021756"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[ Train Details:]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement style="Column header" x="0" y="329" width="802" height="211" forecolor="#000000" uuid="ff8d541e-5c21-4cab-89f6-ccad46aba0eb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9248a2f-05c6-4a7e-bf23-10238e9abe46"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="1.5"/>
+					<topPen lineWidth="1.5" lineStyle="Solid" lineColor="#666666"/>
+					<leftPen lineWidth="1.5" lineStyle="Solid" lineColor="#666666"/>
+					<bottomPen lineWidth="1.5" lineStyle="Solid" lineColor="#666666"/>
+					<rightPen lineWidth="1.5" lineStyle="Solid" lineColor="#666666"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ 1)For details, rules and terms & conditions of E-Ticketing services, please visit www.irctc.co.in.
+ 2)*New Time Table will be effective from 01-09-2014. Departure time and Arrival time printed on this ERS/VRM is liable to change. Please Check  correct departure and arrival from Railway Station Enquiry, Dial 139 or SMS 'RAIL' to 139.'
+ 3)There is amendments in certain provisions of Refund Rule.Refer, Amended Refund Rules w.e.f 01-07-2013.
+ 4)The accommodation booked is not transferable and is valid only if the ID card printed above is presented during the journey. The ERS/VRM  along with printed ID proof in original would be verified by TTE with the name and PNR on the chart. If the passenger fail to produce/display  ERS/VRM due to any eventuality (loss, damaged mobile/laptop etc.) but has the prescribed original proof of identity, a penalty of Rs.50/- per ticket  as applicable to such cases will be levied. The ticket checking staff On board/Off board will give Excess Fare Ticket for the same.
+ 5)E-ticket cancellations are permitted through www.irctc.co.in by the user.
+ 6)PNRs having fully waitlisted status will be dropped and the names of the passengers will not appear on the chart. They are not allowed to board  the train. However the namesof PARTIALLY waitlisted/confirmed and RAC will appear in the chart.
+ 7)Obtain certificate from the TTE /Conductor in case of PARTIALLY waitlisted e-ticket LESS NO. OF PASSENGERS travelled A.C.FAILURE,  TRAVEL IN LOWER CLASS. This original certificate must be sent to GGM (IT), IRCTC, Internet Ticketing Centre, IRCA Building, State Entry  Road, New Delhi-110055 after filing on-line refund request for claiming refund.
+ 8)In case of Partial confirmed/RAC/Wait listed ticket,TDR should be filed online of all the those passengers who did not travel for processing of  refund in prescribed time as per Railway refund rules. The refund will be processed by the concerned zonal Railways as per Railway refund rules.
+ 9)In Premium Special Train cancellation is not allowed.However, ticket can be cancelled and full refund is admissible if the train is cancelled by  Indian Railways.
+ 10)Passengers are advised not to carry inflammable/dangerous/explosive/articles as part of their luggage and also to desist from smoking in the trains.
+ 11)Contact us on: - 24*7 Hrs Customer Support at 011-23340000 , Chennai Customer Care 044 – 25300000 or Mail To: care@irctc.co.in.  12)For any suggestions/complaints related to Catering services,contact Toll Free No. 1800-111-321 (07.00 hrs to 22.00 hrs)
+ Railway Security Helpline No.1322
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="311" width="802" height="18" uuid="dee33f8f-5a2b-4f55-b9e0-173db3672b3f"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ IMPORTANT:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="20" uuid="a532933b-4ded-4b2c-a1f6-4dcfcd049abd"/>
+				<box rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IRCTCs e­Ticketing Service ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="802" height="20" uuid="32321459-9387-4ae7-87a0-b4071fa67ad0"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Electronic Reservation Slip (Personal User)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="802" height="80" uuid="3417b8e0-0ae8-465c-b461-15e1e6f6b00b"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[ •This ticket will only be valid with an ID proof in original. If found travelling without ID Proof, Passenger will be treated as without  ticket and charged as per extant Railway rules.
+ •At least one passenger should travel with his/her ID card in original which is indicated on the ERS/VRM. In case he/she is not  travelling, all other passenger(s) booked on that ticket, if found travelling in train will be treated as travelling without ticket and  charged accordingly.
+ •Valid IDs to be presented during train journey by one of the passenger booked on an e-ticket :- Voter Identity Card / Passport /  PAN Card / Driving License / Photo ID card issued by Central / State Govt / Public Sector Undertakings of State / Central  Government ,District Administrations , Muncipal bodies and Panchayat Administrations which are having serial number / Student  I  dentity Card with photograph issued by recognized School or College for their students / Nationalized Bank Passbook with  photograph /Credit Cards issued by Banks with laminated photograph/Unique Identification Card "Aadhaar".
+ •General rules/ Information for e-ticket passenger have to be studied by the customer for cancellation & refund.
+]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

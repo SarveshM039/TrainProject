@@ -1,0 +1,45 @@
+
+body {
+  background-color:#e7f1f6;
+}
+
+
+ @media (min-width: 1100px) {
+    .container-fluid{
+        max-width: 800px;
+        
+    }
+}
+.navbar navbar-expand-lg navbar-dark bg-dark{
+	left:30%
+	
+}
+
+.navbar-nav > li{
+  padding-left:10px;
+  padding-right:10px;
+}
+.contain{
+	color:dark green;
+	background-color:green;
+	padding:10px;
+	width:30%;
+   height: 30%;
+} 
+
+.col-8{
+	padding:2%;
+	width:60%;
+}
+
+input[type=password] {
+  align-items:"center";	
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  box-sizing: border-box;
+  
+}
